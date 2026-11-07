@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stock Market Analysis</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>Stock Market Analysis</h1>
+            <p>Analyze stock prices, performance and company information</p>
+        </header>
+
+
+        <!-- Main Content -->
+        <main>
+
+            <!-- Chart Section -->
+            <section class="chart-section">
+
+                <div class="section-header">
+                    <h2 id="company-name">AAPL</h2>
+                    <span id="current-stock">Apple Inc.</span>
+                </div>
+
+
+                <!-- Chart -->
+                <div class="chart-container">
+
+                    <canvas id="stockCanvas"></canvas>
+
+                    <!-- Custom Tooltip -->
+                    <div id="canva-tool"></div>
+
+                </div>
+
+
+                <!-- Range Buttons -->
+                <div id="btn">
+
+                    <button
+                        class="range-btn active"
+                        data-range="1month">
+                        1 Month
+                    </button>
+
+                    <button
+                        class="range-btn"
+                        data-range="3month">
+                        3 Months
+                    </button>
+
+                    <button
+                        class="range-btn"
+                        data-range="1year">
+                        1 Year
+                    </button>
+
+                    <button
+                        class="range-btn"
+                        data-range="5year">
+                        5 Years
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Summary Section -->
+            <section class="summary-section">
+
+                <h2>Stock Summary</h2>
+
+                <div class="profit-box">
+
+                    <span>Profit</span>
+
+                    <strong id="profit-value">
+                        --
+                    </strong>
+
+                </div>
+
+
+                <div class="peak-low">
+
+                    <div>
+                        <span>Peak</span>
+                        <strong id="peak-value">
+                            --
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Low</span>
+                        <strong id="low-value">
+                            --
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="company-info">
+
+                    <h3>About Company</h3>
+
+                    <p id="company-summary">
+                        Loading company information...
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- Stock List -->
+        <section class="stocks-section">
+
+            <h2>Stocks</h2>
+
+            <div id="stock-List">
+                <!-- Stocks will be added using JavaScript -->
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="main.js"></script>
+
+</body>
+</html>
